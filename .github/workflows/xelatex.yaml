@@ -1,6 +1,9 @@
 name: xelatex
 on:
   push:
+    paths:
+      - ".github/workflows/xelatex.yaml"
+      - "xelatex-compiler/**"
     branches:
     - master
 
