@@ -2,10 +2,10 @@
 
 set -e
 
-[[ -z "${FOLDER_DIR}" ]] || echo "FOLDER_DIR env var not set" || exit 1
-[[ -z "${BRANCH_NAME}" ]] || echo "BRANCH_NAME env var not set" || exit 1
-[[ -z "${GIT_URL}" ]] || echo "GIT_URL env var not set" || exit 1
-[[ -z "${INTERVAL}" ]] || echo "INTERVAL env var not set" || exit 1
+[[ -z "${FOLDER_DIR}" ]] && echo "FOLDER_DIR env var not set" && exit 1
+[[ -z "${BRANCH_NAME}" ]] && echo "BRANCH_NAME env var not set" && exit 1
+[[ -z "${GIT_URL}" ]] && echo "GIT_URL env var not set" && exit 1
+[[ -z "${INTERVAL}" ]] && echo "INTERVAL env var not set" && exit 1
 
 while true; do
     if [ -d "${FOLDER_DIR}" ]; then
