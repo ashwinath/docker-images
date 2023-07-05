@@ -9,7 +9,7 @@ set -e
 
 while true; do
     if [ -d "${FOLDER_DIR}" ]; then
-        pushd "{FOLDER_DIR}"
+        pushd "${FOLDER_DIR}"
         {
             git fetch
             git checkout -B "${BRANCH_NAME}" "origin/${BRANCH_NAME}"
@@ -17,7 +17,7 @@ while true; do
         popd
     else
         git clone "${GIT_URL}" "${FOLDER_DIR}"
-        pushd "{FOLDER_DIR}"
+        pushd "${FOLDER_DIR}"
         {
             git checkout -B "${BRANCH_NAME}" "origin/${BRANCH_NAME}"
         }
